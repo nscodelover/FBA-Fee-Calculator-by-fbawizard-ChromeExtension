@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FBA Wizard</title>
+    <link rel="stylesheet" href="../css/css.css" />
+
+    <script src="../js/jquery-2.2.3.min.js"></script>
+    <script src="../js/jquery.mask.min.js"></script>
+    <script src="../js/fbawizard.js"></script>
+
+    <script src="../js/crypto/hmac-sha256.js"></script>
+    <script src="../js/crypto/enc-base64-min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</head>
+<body class="wizard">
+    <div class="container">
+        <img src="../img/close.png" class="close" alt="Close" />
+        <img src="../img/settings.png" class="settings" alt="Settings" />
+
+        <img src="../img/logo.png" class="main-logo" />
+
+        <div class="calc">
+            <div class="label">
+                Enter Buy Price
+            </div>
+            <input type="text" id="buy-price" value="" />
+
+            <div class="label">
+                Enter Sell Price
+            </div>
+            <input type="text" id="sell-price" value="" />
+            <br />
+
+            <input type="button" value="Calculate Profit" id="calculate-profit-btn" />
+        </div>
+        <div class="loader-calc">
+            <img src="../img/loader.svg" />
+        </div>
+
+        <div class="result">
+        </div>
+
+        <div class="page-result">
+        </div><br>
+
+        <div class="marketpalce-list">
+          <div class="title-salesrank-price">
+            <label class="lbl-sales-rank">Sales Rank</label>
+            <label class="lbl-buy-box-price">Price</label>
+          </div>
+          <div class="country-flag">
+            <img src="../img/germany.png" class="flag" alt="Germany"/>
+            <label class="sales-rank" id="rank_de"></label>
+            <label class="buy-box-price" id="price_de"></label>
+          </div>
+          <div class="country-flag">
+            <img src="../img/france.png" class="flag" alt="France"/>
+            <label class="sales-rank" id="rank_fr"></label>
+            <label class="buy-box-price" id="price_fr"></label>
+          </div>
+          <div class="country-flag">
+            <img src="../img/spain.png" class="flag" alt="Spain"/>
+            <label class="sales-rank" id="rank_es"></label>
+            <label class="buy-box-price" id="price_es"></label>
+          </div>
+          <div class="country-flag">
+            <img src="../img/italy.png" class="flag" alt="Italy"/>
+            <label class="sales-rank" id="rank_it"></label>
+            <label class="buy-box-price" id="price_it"></label>
+          </div>
+        </div>
+        <br />
+    </div>
+</body>
+</html>

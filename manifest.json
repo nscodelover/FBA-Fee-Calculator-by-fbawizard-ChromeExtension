@@ -1,0 +1,52 @@
+{
+    "manifest_version": 2,
+    "name": "FBA Fee Calculator by FBA Wizard",
+    "short_name": "FBA Fee Calculator",
+    "version": "1.7.7",
+    "description": "FBA Fee Calculator by FBA Wizard",
+    "icons": {
+        "16"  : "img/calc-icon.png",
+        "48"  : "img/calc-icon.png",
+        "128" : "img/calc-icon.png"
+    },
+    "browser_action": {
+        "default_icon": "img/calc-icon.png",
+        "default_popup": "html/popup.html"
+    },
+    "background": {
+        "scripts": ["js/jquery-2.2.3.min.js", "js/background.js"]
+    },
+    "options_page": "html/options.html",
+    "content_scripts": [
+        {
+            "run_at": "document_start",
+            "matches": [
+                "*://www.amazon.co.uk/*",
+                "*://www.amazon.com.au/*",
+                "*://www.amazon.com.br/*",
+                "*://www.amazon.com/*",
+                "*://www.amazon.ca/*",
+                "*://www.amazon.fr/*",
+                "*://www.amazon.cn/*",
+                "*://www.amazon.de/*",
+                "*://www.amazon.in/*",
+                "*://www.amazon.it/*",
+                "*://www.amazon.com.mx/*",
+                "*://www.amazon.es/*",
+                "*://www.amazon.com/*"
+            ],
+            "css": ["css/css.css"],
+            "js": ["js/jquery-2.2.3.min.js", "js/pagefbawizard.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        "html/fbawizard.html",
+        "html/options.html"
+    ],
+    "permissions": [
+        "activeTab",
+        "webRequest",
+        "<all_urls>",
+        "tabs"
+    ]
+}
